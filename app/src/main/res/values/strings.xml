@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">DogFeed</string>
     <string name="novo_cachorro">novo cachorro</string>
-    <string name="favorito">Favorito</string>
+    <string name="favoritar">Favoritar</string>
 </resources>

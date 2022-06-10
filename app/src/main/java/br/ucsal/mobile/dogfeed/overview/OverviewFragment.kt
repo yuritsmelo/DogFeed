@@ -30,7 +30,7 @@ class OverviewFragment : Fragment(){
 
         binding.buttonNew.setOnClickListener{viewModel.getDogPhotos()}
 
-        binding.switchFav.setOnClickListener{Toast.makeText(this.context, "added to favs", Toast.LENGTH_SHORT).show()}
+        binding.buttonFav.setOnClickListener{Toast.makeText(this.context, "added to favs", Toast.LENGTH_SHORT).show()}
 
         return binding.root
     }
