@@ -18,11 +18,11 @@ class PhotoGridAdapter : ListAdapter<DogPhoto, PhotoGridAdapter.DogPhotosViewHol
     }
 
     companion object DiffCallback : DiffUtil.ItemCallback<DogPhoto>() {
-        override fun areItemsTheSame(oldItem: DogPhoto, newItem: DogPhoto): Boolean {
-            return false
+        override fun areContentsTheSame(oldItem: DogPhoto, newItem: DogPhoto): Boolean {
+            return oldItem.imgSrcUrl == newItem.imgSrcUrl
         }
 
-        override fun areContentsTheSame(oldItem: DogPhoto, newItem: DogPhoto): Boolean {
+        override fun areItemsTheSame(oldItem: DogPhoto, newItem: DogPhoto): Boolean {
             return oldItem.imgSrcUrl == newItem.imgSrcUrl
         }
     }
