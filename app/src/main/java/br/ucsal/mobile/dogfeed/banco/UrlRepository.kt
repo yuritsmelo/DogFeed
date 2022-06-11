@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 
 class UrlRepository(private val urlDao: FavsDao) {
 
-    val allWords: Flow<List<DogPhoto>> = urlDao.getAllUrls()
+    val allUrls: Flow<List<DogPhoto>> = urlDao.getAllUrls()
 
     @Suppress("RedundantSuspendModifier")
     @WorkerThread

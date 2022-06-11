@@ -5,7 +5,7 @@ import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import br.ucsal.mobile.dogfeed.network.DogPhoto
-import br.ucsal.mobile.dogfeed.overview.PhotoGridAdapter
+import br.ucsal.mobile.dogfeed.overview.DogListAdapter
 import coil.load
 
 class BindingAdapters
@@ -23,6 +23,6 @@ fun bindImage(imgView: ImageView, imgUrl: String?) {
 
 @BindingAdapter("listData")
 fun bindRecyclerView(recyclerView: RecyclerView, data: List<DogPhoto>?) {
-    val adapter = recyclerView.adapter as PhotoGridAdapter
+    val adapter = recyclerView.adapter as DogListAdapter
     adapter.submitList(data)
 }

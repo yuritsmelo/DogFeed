@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewModel"
-            type="br.ucsal.mobile.dogfeed.overview.OverviewViewModel" />
+            type="br.ucsal.mobile.dogfeed.banco.UrlViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         tools:context="br.ucsal.mobile.dogfeed.overview.OverViewFragment">
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/photos_grid"
+            android:id="@+id/photos_recyclerview"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:clipToPadding="false"
@@ -24,9 +24,9 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:listData="@{viewModel.photos}"
+            app:listData="@{viewModel.allUrls}"
             tools:itemCount="3"
-            tools:listitem="@layout/grid_view_item"
+            tools:listitem="@layout/recyclerview_item"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

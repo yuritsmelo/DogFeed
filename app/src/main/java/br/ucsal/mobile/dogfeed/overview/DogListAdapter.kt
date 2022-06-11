@@ -5,12 +5,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import br.ucsal.mobile.dogfeed.databinding.GridViewItemBinding
+import br.ucsal.mobile.dogfeed.databinding.RecyclerviewItemBinding
 import br.ucsal.mobile.dogfeed.network.DogPhoto
 
-class PhotoGridAdapter : ListAdapter<DogPhoto, PhotoGridAdapter.DogPhotosViewHolder>(DiffCallback){
+class DogListAdapter : ListAdapter<DogPhoto, DogListAdapter.DogPhotosViewHolder>(DiffCallback){
 
-    class DogPhotosViewHolder(private var binding: GridViewItemBinding) : RecyclerView.ViewHolder(binding.root) {
+    class DogPhotosViewHolder(private var binding: RecyclerviewItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(dogPhoto: DogPhoto) {
             binding.photo = dogPhoto
             binding.executePendingBindings()
@@ -29,7 +29,7 @@ class PhotoGridAdapter : ListAdapter<DogPhoto, PhotoGridAdapter.DogPhotosViewHol
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DogPhotosViewHolder {
         return DogPhotosViewHolder(
-            GridViewItemBinding.inflate(LayoutInflater.from(parent.context))
+            RecyclerviewItemBinding.inflate(LayoutInflater.from(parent.context))
         )
     }
 

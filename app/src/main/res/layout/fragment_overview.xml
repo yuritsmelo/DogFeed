@@ -16,7 +16,7 @@
         tools:context="br.ucsal.mobile.dogfeed.overview.OverViewFragment">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/photos_grid"
+            android:id="@+id/photos_recyclerview"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:clipToPadding="false"
@@ -27,7 +27,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:listData="@{viewModel.photos}"
             tools:ignore="SpeakableTextPresentCheck"
-            tools:listitem="@layout/grid_view_item" />
+            tools:listitem="@layout/recyclerview_item" />
 
         <Button
             android:id="@+id/button_new"
