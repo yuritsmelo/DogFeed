@@ -5,7 +5,6 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import br.ucsal.mobile.dogfeed.network.DogPhoto
-import java.security.AccessControlContext
 
 @Database(entities = arrayOf(DogPhoto::class), version = 1, exportSchema = false)
 public abstract class UrlRoomDatabase : RoomDatabase() {
