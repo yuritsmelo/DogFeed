@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/yurit/AndroidStudioProjects/DogFeed/app/src/main/res/layout/activity_favs.xml" value="0.21197916666666666" />
         <entry key="..\:/Users/yurit/AndroidStudioProjects/DogFeed/app/src/main/res/layout/favs.xml" value="0.18795289855072464" />
         <entry key="..\:/Users/yurit/AndroidStudioProjects/DogFeed/app/src/main/res/layout/fragment_overview.xml" value="0.21197916666666666" />
         <entry key="..\:/Users/yurit/AndroidStudioProjects/DogFeed/app/src/main/res/layout/grid_view_item.xml" value="0.21197916666666666" />

@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.ucsal.mobile.dogfeed.databinding.RecyclerviewItemBinding
 import br.ucsal.mobile.dogfeed.network.DogPhoto
 
-class DogListAdapter : ListAdapter<DogPhoto, DogListAdapter.DogPhotosViewHolder>(DiffCallback){
+class DogListAdapter : ListAdapter<DogPhoto, DogListAdapter.DogPhotosViewHolder>(UrlCallback){
 
     class DogPhotosViewHolder(private var binding: RecyclerviewItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(dogPhoto: DogPhoto) {
@@ -17,7 +17,7 @@ class DogListAdapter : ListAdapter<DogPhoto, DogListAdapter.DogPhotosViewHolder>
         }
     }
 
-    companion object DiffCallback : DiffUtil.ItemCallback<DogPhoto>() {
+    companion object UrlCallback : DiffUtil.ItemCallback<DogPhoto>() {
         override fun areContentsTheSame(oldItem: DogPhoto, newItem: DogPhoto): Boolean {
             return oldItem.imgSrcUrl == newItem.imgSrcUrl
         }

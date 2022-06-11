@@ -7,7 +7,6 @@ import androidx.room.Query
 import br.ucsal.mobile.dogfeed.network.DogPhoto
 import kotlinx.coroutines.flow.Flow
 
-
 @Dao
 interface FavsDao {
     @Query("SELECT * FROM url_table")
