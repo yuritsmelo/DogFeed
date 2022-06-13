@@ -9,8 +9,8 @@ import br.ucsal.mobile.dogfeed.network.DogPhoto
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-@Database(entities = arrayOf(DogPhoto::class), version = 1, exportSchema = false)
-public abstract class UrlRoomDatabase : RoomDatabase() {
+@Database(entities = [DogPhoto::class], version = 1, exportSchema = false)
+abstract class UrlRoomDatabase : RoomDatabase() {
 
     abstract fun favsDao() : FavsDao
 
@@ -26,6 +26,8 @@ public abstract class UrlRoomDatabase : RoomDatabase() {
 
         suspend fun populateDatabase(favsDao: FavsDao){
             //favsDao.deleteAll()
+            val dog = DogPhoto("https://images.dog.ceo/breeds/setter-gordon/n02101006_1208.jpg")
+            favsDao.insert(dog)
         }
     }
 
