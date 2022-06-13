@@ -1,6 +1,6 @@
 # DogFeed
 
-Projeto escolhido para avaliação da segunda unidade da disciplina Programação para Dispositivos Móveis 
+Projeto escolhido para avaliação da segunda unidade da disciplina Programação para Dispositivos Móveis. 
 
 # Dog CEO API
 
