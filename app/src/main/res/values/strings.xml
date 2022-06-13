@@ -2,4 +2,5 @@
     <string name="app_name">DogFeed</string>
     <string name="novo_cachorro">novo cachorro</string>
     <string name="favoritar">Favoritar</string>
+    <string name="favoritos">Favoritos</string>
 </resources>

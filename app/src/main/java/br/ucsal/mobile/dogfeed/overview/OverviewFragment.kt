@@ -3,12 +3,14 @@ package br.ucsal.mobile.dogfeed.overview
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
+import br.ucsal.mobile.dogfeed.R
 import br.ucsal.mobile.dogfeed.banco.FavsDao
 import br.ucsal.mobile.dogfeed.banco.UrlViewModel
 import br.ucsal.mobile.dogfeed.databinding.FragmentOverviewBinding
@@ -41,9 +43,18 @@ class OverviewFragment : Fragment(){
             )
         } }
 
+        setHasOptionsMenu(true)
+
         return binding.root
     }
-    companion object {
-        const val EXTRA_REPLY = "com.example.android.wordlistsql.REPLY"
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item,
+            requireView().findNavController()) || super.onOptionsItemSelected(item)
     }
 }
