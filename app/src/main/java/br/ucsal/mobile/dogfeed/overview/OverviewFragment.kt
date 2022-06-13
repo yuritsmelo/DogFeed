@@ -29,7 +29,6 @@ class OverviewFragment : Fragment(){
         binding.lifecycleOwner = this
 
         binding.viewModel = viewModel
-        //binding.viewModel2 = viewModel2
 
         binding.photosRecyclerview.adapter = DogListAdapter()
 
@@ -37,11 +36,18 @@ class OverviewFragment : Fragment(){
 
         //binding.buttonFav.setOnClickListener{Toast.makeText(this.context, "added to favs", Toast.LENGTH_SHORT).show()}
 
-        binding.buttonFav.setOnClickListener{ viewModel.photos.value?.let { it1 ->
-            viewModel2.insert(
-                it1[0]
-            )
-        } }
+        binding.buttonFav.setOnClickListener{
+            try {
+                viewModel.photos.value?.let { it1 ->
+                    viewModel2.insert(
+                        it1[0]
+                    )}
+                Toast.makeText(this.context, "adicionado aos favoritos", Toast.LENGTH_SHORT).show()
+            }catch(e: Exception){
+                Toast.makeText(this.context, "erro", Toast.LENGTH_SHORT).show()
+            }
+
+    }
 
         setHasOptionsMenu(true)
 
